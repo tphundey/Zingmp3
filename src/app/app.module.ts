@@ -3,25 +3,38 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductListComponent } from './components/product-list/product-list.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SidebarModule } from 'ng-cdbangular';
 import { BaseLayoutComponent } from './layout/base-layout/base-layout.component';
 import { KhamphaComponent } from './pages/khampha/khampha.component';
 import { RadioComponent } from './pages/radio/radio.component';
 import { LibComponent } from './pages/lib/lib.component';
+import { CanhanComponent } from './pages/canhan/canhan.component';
+import { ZingchartComponent } from './pages/zingchart/zingchart.component';
+import { NhacmoiComponent } from './pages/nhacmoi/nhacmoi.component';
+import { TheloaiComponent } from './pages/theloai/theloai.component';
+import { TheodoiComponent } from './pages/theodoi/theodoi.component';
+import { Top100Component } from './pages/top100/top100.component';
+import { MvComponent } from './pages/mv/mv.component';
 // decorators
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent,
     HomeComponent,
     SidebarComponent,
     BaseLayoutComponent,
     KhamphaComponent,
     RadioComponent,
     LibComponent,
+    BaseLayoutComponent,
+    CanhanComponent,
+    ZingchartComponent,
+    NhacmoiComponent,
+    TheloaiComponent,
+    TheodoiComponent,
+    Top100Component,
+    MvComponent
   ],
   imports: [
     BrowserModule,
