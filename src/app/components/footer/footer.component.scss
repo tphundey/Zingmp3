@@ -81,7 +81,6 @@ svg {
 .player__song-btn {
     font-size: 13px;
 }
-
 .image-music img {
     border-radius: 100%;
     height: 60px;
@@ -115,4 +114,8 @@ svg {
     display: flex;
     gap: 20px;
     padding: 15px;
+}
+
+.player__control-btn{
+    display: flex;
 }

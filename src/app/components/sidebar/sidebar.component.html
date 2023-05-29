@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <ul class="list-unstyled app_sidebar" style="min-height: 100vh; " >
+    <ul class="list-unstyled app_sidebar" style="min-height: 100vh; ">
         <div href="#" class="sidebar_logo">
             <a class="sidebar_logo-link">
-                <img src="../../../assets/images/main-logo.svg" alt="" >
+                <img src="../../../assets/images/main-logo.svg" alt="">
             </a>
         </div>
         <div class="sidebar-nav">
             <ul class="sidebar_nav-list">
-                <li class="sidebar_nav-item"><a routerLink="canhan" class="sidebar_item-link"><i class="bi bi-music-player"></i> Cá Nhân</a></li>
-                <li class="sidebar_nav-item"><a routerLink="khampha" class="sidebar_item-link"><i class="bi bi-vinyl"></i> Khám Phá</a></li>
-                <li class="sidebar_nav-item"><a routerLink="zingchart" class="sidebar_item-link"><i class="bi bi-music-note-list"></i> #Zingchart</a></li>
-                <li class="sidebar_nav-item"><a routerLink="radio" class="sidebar_item-link"><i class="bi bi-soundwave"></i> Radio</a></li>
-                <li class="sidebar_nav-item"><a routerLink="theodoi" class="sidebar_item-link"><i class="bi bi-file-earmark-slides"></i> Theo dõi</a></li>
+                <li class="sidebar_nav-item"><a routerLink="canhan" class="sidebar_item-link"><i
+                            class="bi bi-music-player"></i> <span>Cá Nhân</span></a></li>
+                <li class="sidebar_nav-item"><a routerLink="khampha" class="sidebar_item-link"><i
+                            class="bi bi-vinyl"></i> <span>Khám Phá</span></a></li>
+                <li class="sidebar_nav-item"><a routerLink="zingchart" class="sidebar_item-link"><i
+                            class="bi bi-music-note-list"></i> <span>#Zingchart</span></a></li>
+                <li class="sidebar_nav-item"><a routerLink="radio" class="sidebar_item-link"><i
+                            class="bi bi-soundwave"></i> <span>Radio</span><input class="bt-live" type="button"
+                            value="LIVE"></a></li>
+                <li class="sidebar_nav-item"><a routerLink="theodoi" class="sidebar_item-link"><i
+                            class="bi bi-file-earmark-slides"></i> <span>Theo dõi</span></a></li>
             </ul>
             <hr>
         </div>
         <div class="sidebar_subnav">
             <ul class="sidebar_nav-list">
-                <li class="sidebar_nav-item subnav-item"><a routerLink="nhacmoi" class="sidebar_item-link"><i class="bbi bi-music-note-beamed"></i> Nhạc Mới</a></li>
-                <li class="sidebar_nav-item subnav-item"><a routerLink="theloai" class="sidebar_item-link"><i class="bi bi-slack"></i> Thể Loại</a></li>
-                <li class="sidebar_nav-item subnav-item"><a routerLink="top100" class="sidebar_item-link"><i class="bi bi-star"></i> Top 100</a></li>
-                <li class="sidebar_nav-item subnav-item"><a routerLink="mv" class="sidebar_item-link"><i class="bi bi-camera-video"></i> Mv</a></li>
+                <li class="sidebar_nav-item subnav-item"><a routerLink="nhacmoi" class="sidebar_item-link"><i
+                            class="bbi bi-music-note-beamed"></i> <span>Nhạc Mới</span></a></li>
+                <li class="sidebar_nav-item subnav-item"><a routerLink="theloai" class="sidebar_item-link"><i
+                            class="bi bi-slack"></i> <span>Thể Loại</span></a></li>
+                <li class="sidebar_nav-item subnav-item"><a routerLink="top100" class="sidebar_item-link"><i
+                            class="bi bi-star"></i> <span>Top 100</span></a></li>
+                <li class="sidebar_nav-item subnav-item"><a routerLink="mv" class="sidebar_item-link"><i
+                            class="bi bi-camera-video"></i> <span>Mv</span></a></li>
             </ul>
             <div class="sidebar_login">
                 <p class="sidebar_login-description">Nghe nhạc không quảng cáo cùng kho nhạc VIP</p>
-                <a class="sidebar_login-btn button is-small button-gold">Mua Vip</a>
+                <a class="sidebar_login-btn button is-small button-gold them">MUA VIP</a>
             </div>
-           
+
         </div>
         <div class="sidebar_create-playlist">
             <div class="sidebar_create-container">
                 <i class="bi bi-plus-lg"></i>
-                <div class="sidebar_create-title">Tạo playlist mới</div>
+                <div class="sidebar_create-title"><span style="padding-left: 10px;font-weight: 600;font-size: 14px;">Tạo
+                        playlist mới</span></div>
             </div>
         </div>
-        
+
     </ul>
 </body>
+
 </html>
