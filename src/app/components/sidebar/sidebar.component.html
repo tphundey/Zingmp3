@@ -33,8 +33,11 @@
         </div>
         <div class="sidebar_subnav">
             <ul class="sidebar_nav-list">
-                <li class="sidebar_nav-item subnav-item"><a routerLink="nhacmoi" class="sidebar_item-link"><i
-                            class="bbi bi-music-note-beamed"></i> <span>Nhạc Mới</span></a></li>
+                <li class="sidebar_nav-item subnav-item">
+                    <a class="sidebar_item-link" (click)="showAlert()">
+                        <i class="bbi bi-music-note-beamed"></i> <span>Nhạc Mới</span>
+                    </a>
+                </li>
                 <li class="sidebar_nav-item subnav-item"><a routerLink="theloai" class="sidebar_item-link"><i
                             class="bi bi-slack"></i> <span>Thể Loại</span></a></li>
                 <li class="sidebar_nav-item subnav-item"><a routerLink="top100" class="sidebar_item-link"><i

@@ -144,7 +144,7 @@ svg {
 
 .ca {
     position: absolute;
-    bottom: -312px;
+    bottom: -315px;
     width: 100%;
     transform: translateY(50%);
     transition: transform 0.5s ease-in-out;
@@ -167,7 +167,7 @@ svg {
 
 .detail {
     width: 100%;
-    height: 630px;
+    height: 637.5px;
     background-color:
         #41284D;
 }
@@ -191,8 +191,16 @@ svg {
     margin-left: 15%;
 }
 
+.lyric p {
+    font-weight: 600;
+    font-size: 20px;
+
+}
+
 .close {
     position: absolute;
     top: 10px;
     right: 10px;
 }
+
+
