@@ -3,7 +3,7 @@ footer {
     width: 100%;
     height: 80px;
     position: fixed;
-    bottom: 0;
+    bottom: -4px;
     left: 0;
     color: white;
 }
@@ -50,8 +50,9 @@ audio::-webkit-media-controls-mute-button {
     background-color: white;
     border-radius: 1000px;
 }
+
 audio::-webkit-media-controls-enclosure {
-    background:none;
+    background: none;
 }
 
 
@@ -81,10 +82,11 @@ svg {
 .player__song-btn {
     font-size: 13px;
 }
+
 .image-music img {
     border-radius: 100%;
     height: 60px;
-    width: 70px;
+    width: 60px;
     margin-top: 9px;
 }
 
@@ -116,6 +118,81 @@ svg {
     padding: 15px;
 }
 
-.player__control-btn{
+.player__control-btn {
     display: flex;
+}
+
+.image-music img.rotate {
+    animation-name: rotate-animation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate-animation {
+    from {
+        transform: rotate(0deg);
+
+    }
+
+    to {
+        transform: rotate(360deg);
+
+    }
+}
+
+
+.ca {
+    position: absolute;
+    bottom: -312px;
+    width: 100%;
+    transform: translateY(50%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.close-btn {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.detail {
+    width: 100%;
+    height: 630px;
+    background-color:
+        #41284D;
+}
+
+.scl-1 {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
+
+.fl-1 {
+    display: flex;
+}
+
+.anhnen {
+    padding: 10%;
+}
+
+.lyric {
+    padding: 5%;
+    margin-left: 15%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
