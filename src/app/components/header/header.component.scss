@@ -13,8 +13,8 @@
     flex: 1;
     height: 70px;
     box-sizing: inherit;
-    background-color: #37075d;
-    width: 100%;
+    background-color: #2C064A;
+    width: 85%;
 }
 .header__with-search{
     flex: 1;
@@ -34,7 +34,7 @@
     width: 24px;
     display: block;
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     margin-right: 20px;
     color:#fff;
 }
@@ -73,7 +73,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     background: transparent;
-    width: calc(100%-38px);
+    width: calc(100% - 38px);
     color: #fff;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;

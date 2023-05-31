@@ -1,10 +1,14 @@
 <div class="container-fluid base">
   <div class="row">
-    <div style="width: 18%;">
+    <div style="width: 18%">
       <app-sidebar></app-sidebar>
     </div>
-    <div style="width: 82%;">
-      <main class=""><router-outlet /></main>
+    <div style="width: 82%">
+      <main class="">
+        <router-outlet
+          ><app-header style="width: 100%"></app-header>
+        </router-outlet>
+      </main>
     </div>
     <div>
       <app-footer></app-footer>
