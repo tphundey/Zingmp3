@@ -141,12 +141,11 @@ svg {
     }
 }
 
-
 .ca {
     position: absolute;
-    bottom: -315px;
+    bottom: -275.1px;
     width: 100%;
-    transform: translateY(50%);
+    transform: translateY(70%);
     transition: transform 0.5s ease-in-out;
 }
 
@@ -167,7 +166,7 @@ svg {
 
 .detail {
     width: 100%;
-    height: 637.5px;
+    height: 570px;
     background-color:
         #41284D;
 }
@@ -204,3 +203,12 @@ svg {
 }
 
 
+
+//responsive for tablet
+
+@media (max-width: 768px) {
+    .hideon_mobile {
+        display: none;
+    }
+
+}

@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <div href="#" class="sidebar_logo">
+        <a style="position: fixed;" class="sidebar_logo-link">
+            <img src="../../../assets/images/main-logo.svg" alt="">
+        </a>
+    </div>
 
-<body>
     <ul class="list-unstyled app_sidebar" style="min-height: 100vh; ">
-        <div href="#" class="sidebar_logo">
-            <a class="sidebar_logo-link">
-                <img src="../../../assets/images/main-logo.svg" alt="">
-            </a>
-        </div>
         <div class="sidebar-nav">
             <ul class="sidebar_nav-list">
                 <li class="sidebar_nav-item"><a routerLink="canhan" class="sidebar_item-link"><i
@@ -38,28 +30,27 @@
                         <i class="bbi bi-music-note-beamed"></i> <span>Nhạc Mới</span>
                     </a>
                 </li>
-                <li class="sidebar_nav-item subnav-item"><a routerLink="theloai" class="sidebar_item-link"><i
+                <li class="sidebar_nav-item subnav-item"><a (click)="showAlert()" routerLink="theloai" class="sidebar_item-link"><i
                             class="bi bi-slack"></i> <span>Thể Loại</span></a></li>
-                <li class="sidebar_nav-item subnav-item"><a routerLink="top100" class="sidebar_item-link"><i
+                <li class="sidebar_nav-item subnav-item"><a (click)="showAlert()" routerLink="top100" class="sidebar_item-link"><i
                             class="bi bi-star"></i> <span>Top 100</span></a></li>
-                <li class="sidebar_nav-item subnav-item"><a routerLink="mv" class="sidebar_item-link"><i
+                <li class="sidebar_nav-item subnav-item"><a (click)="showAlert()" routerLink="mv" class="sidebar_item-link"><i
                             class="bi bi-camera-video"></i> <span>Mv</span></a></li>
             </ul>
             <div class="sidebar_login">
-                <p class="sidebar_login-description">Nghe nhạc không quảng cáo cùng kho nhạc VIP</p>
-                <a class="sidebar_login-btn button is-small button-gold them">MUA VIP</a>
+                <p (click)="showAlert()" class="sidebar_login-description">Nghe nhạc không quảng cáo cùng kho nhạc VIP</p>
+                <a (click)="showAlert()" class="sidebar_login-btn button is-small button-gold them">MUA VIP</a>
             </div>
 
         </div>
         <div class="sidebar_create-playlist">
             <div class="sidebar_create-container">
                 <i class="bi bi-plus-lg"></i>
-                <div class="sidebar_create-title"><span style="padding-left: 10px;font-weight: 600;font-size: 14px;">Tạo
+                <div (click)="showAlert()" class="sidebar_create-title"><span style="padding-left: 10px;font-weight: 600;font-size: 14px;">Tạo
                         playlist mới</span></div>
             </div>
         </div>
 
     </ul>
-</body>
 
-</html>
+</header>

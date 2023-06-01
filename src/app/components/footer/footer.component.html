@@ -60,7 +60,7 @@
                         </marquee>
                         <span class="name_author">Nguyen, Đ Tuấn Vũ</span>
                     </div>
-                    <div class="icon-play-music">
+                    <div class="icon-play-music hideon_mobile">
                         <div class="player__song-btn">
                             <i class="btn--icon icon--heart bi bi-heart-fill primary"></i>
                         </div>
@@ -102,13 +102,13 @@
                     <div class="option_music player__options hide-on-mobile">
                         <div class="option_music player__options-container">
                             <div class="player__options-btn option-btn hide-on-tablet-mobile">
-                                <i class="bi bi-camera-video btn--icon"></i>
+                                <i (click)="showAlert()" class="bi bi-camera-video btn--icon"></i>
                             </div>
                             <div class="player__options-btn option-btn hide-on-tablet-mobile">
-                                <i class="bi bi-mic btn--icon"></i>
+                                <i (click)="showAlert()" class="bi bi-mic btn--icon"></i>
                             </div>
                             <div class="player__options-btn volume option-btn">
-                                <i class="bi bi-volume-up btn--icon"></i>
+                                <i (click)="showAlert()" class="bi bi-volume-up btn--icon"></i>
                             </div>
                             <div class="player__volume-progress">
                                 <input type="range" class="volume__range" value="100" step="1" min="0" max="100">
