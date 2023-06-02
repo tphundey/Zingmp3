@@ -10,12 +10,14 @@ import { NhacmoiComponent } from './pages/nhacmoi/nhacmoi.component';
 import { TheloaiComponent } from './pages/theloai/theloai.component';
 import { Top100Component } from './pages/top100/top100.component';
 import { MvComponent } from './pages/mv/mv.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 const routes: Routes = [
   {
     path: '', component: BaseLayoutComponent, children: [
       { path: "", redirectTo: "home", pathMatch: "full" },
+      { path: "home", component: HomeComponent },
       { path: "canhan", component: CanhanComponent },
       { path: "khampha", component: KhamphaComponent },
       { path: "zingchart", component: ZingchartComponent },

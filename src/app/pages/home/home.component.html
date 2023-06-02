@@ -1,1 +1,145 @@
-Main
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <div class="app_header-user">
+        <div class="app_user-avatar">
+            <img src="./assets/images/avatar.jpg" alt="" class="app_user-img">
+        </div>
+        <span class="app_user-name">Trần Huyền My</span>
+    </div>
+    <!-- <div class="app_header-actions">
+        <a href="#" class="vip-btn is-small button button-gold ">Mua vip ngay</a>
+        <a href="#" class="vip-code-btn is-small button ">Nhập code vip</a>
+        <a class="app_header-options options--log-out ">
+            <i class="bi bi-three-dots"></i>
+            <div class="option_log-out">
+                <i class="bi bi-box-arrow-right log-out_icon"></i>
+                <span>Đăng xuất</span>
+            </div>
+        </a>
+    </div> -->
+    <div class="content">
+        <div class="content_navbar">
+            <div class="content_navbar-container">
+                <ul class="content_navbar-menu">
+                    <li class="content_navbar-item"><span>Tổng quan</span></li>
+                    <li class="content_navbar-item"><span>Bài hát</span></li>
+                    <li class="content_navbar-item"><span>Playlist</span></li>
+                    <li class="content_navbar-item"><span>Album</span></li>
+                    <li class="content_navbar-item"><span>Mv</span></li>
+                    <li class="content_navbar-item"><span>Nghệ sĩ</span></li>
+                    <li class="content_navbar-item"><span>Tải lên</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="grid container_tab tab-home active" >
+    <div class="content_container">
+        <div  class="container_control row">
+            <div  class="col l-12 m-12 c-12 mb-10">
+                <div  class="container_header">
+                    <a href="#" class="container_header-title">
+                        <h3>Bài Hát&nbsp;</h3>
+                        <i class="bi bi-chevron-right container_header-icon"></i>
+                    </a>
+                    <h3 class="container_header-subtitle">Bài Hát</h3>
+                    <div class="container_header-actions">
+                        <div class="button is-small container_header-btn ">
+                            <input type="file" name="upload song" id="home_upload-input" class="container_header-input">
+                            <label for="home_upload-input">
+                                <i class="bi bi-upload container_header-icon"></i>
+                                Tải lên
+                            </label>
+                        </div>
+                        <button class="button is-small button-primary container_header-btn btn--play-all">
+                            <i class="bi bi-play-fill container_header-icon"></i>
+                            <span>Phát tất cả</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex;" class="col l-12 m-12 c-12 ">
+                <div class="container_playmusic" style="width: 30%;">
+                    <div class="container_slide ">
+                        <div class="container_slide-show">
+                            <div class="container_slide-item first">
+                                <div style="background: url('./assets/images/slides/slide1.jpg') no-repeat center center / cover" class="container_slide-img"></div>
+                            </div>
+                            <div class="container_slide-item second">
+                                <div style="background: url('./assets/images/slides/slide2.jpg') no-repeat center center / cover" class="container_slide-img"></div>
+                            </div>
+                            <div class="container_slide-item third">
+                                <div style="background: url('./assets/images/slides/slide3.jpg') no-repeat center center / cover" class="container_slide-img"></div>
+                            </div>
+                            <div class="container_slide-item fourth">
+                                <div style="background: url('./assets/images/slides/slide4.jpg') no-repeat center center / cover" class="container_slide-img"></div>
+                            </div>
+                            <div class="container_slide-item fourth">
+                                <div style="background: url('./assets/images/slides/slide5.jpg') no-repeat center center / cover" class="container_slide-img"></div>
+                            </div>
+                            <div class="container_slide-item fourth">
+                                <div style="background: url('./assets/images/slides/slide6.jpg') no-repeat center center / cover" class="container_slide-img"></div>
+                            </div>
+                            <div class="container_slide-item fourth">
+                                <div style="background: url('./assets/images/slides/slide7.jpg') no-repeat center center / cover" class="container_slide-img"></div>
+                            </div>
+                            <div class="container_slide-item fourth">
+                                <div style="background: url('./assets/images/slides/slide8.jpg') no-repeat center center / cover" class="container_slide-img"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container_playlist">
+                    <div style="width: 70%;" class="playlist_list">
+                        <div class="playlist_list-song media active" data-index="0">
+                            <div class="playlist_song-info media_left">
+                                
+                                <div class="playlist_song-thumb media_thumb" style="background: url('./assets/images/music/listSong1/song1.jpg') no-repeat center center / cover">
+                                    <div class="thumb--animate">
+                                        <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
+                                        </div>
+                                    </div>
+                                    <div class="play-song--actions">
+                                        <div class="control-btn btn-toggle-play btn--play-song">
+                                            <i class="bi bi-play-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="playlist_song-body media_info">
+                                    <span class="playlist_song-title info_title">Cứ Chill Thôi</span>
+                                    <p class="playlist_song-author info_author">
+                                            <a href="#" class="is-ghost">Chillies</a>, 
+                                            <a href="#" class="is-ghost">Suni Hạ Linh</a>, 
+                                            <a href="#" class="is-ghost">Rhymastic</a> 
+                                    </p>
+                                </div>
+                            </div>
+                            <span class="playlist_song-time media_content">04:30</span>
+                            <div class="playlist_song-option  media_right">
+                                <div class="playlist_song-btn btn--mic option-btn hide-on-mobile">
+                                    <i class="btn--icon song_icon bi bi-mic-fill"></i>
+                                </div>
+                                <div class="playlist_song-btn song-btn--heart option-btn hide-on-mobile">
+                                    <i class="btn--icon song_icon icon--heart bi bi-heart-fill primary"></i>
+                                </div>
+                                <div class="playlist_song-btn option-btn hide-on-tablet">
+                                    <i class="btn--icon bi bi-three-dots"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>
