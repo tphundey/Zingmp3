@@ -17,6 +17,8 @@ import { TheloaiComponent } from './pages/theloai/theloai.component';
 import { TheodoiComponent } from './pages/theodoi/theodoi.component';
 import { Top100Component } from './pages/top100/top100.component';
 import { MvComponent } from './pages/mv/mv.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 // decorators
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { MvComponent } from './pages/mv/mv.component';
     TheloaiComponent,
     TheodoiComponent,
     Top100Component,
-    MvComponent
+    MvComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

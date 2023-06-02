@@ -23,10 +23,6 @@ const routes: Routes = [
       { path: "zingchart", component: ZingchartComponent },
       { path: "radio", component: RadioComponent },
       { path: "theodoi", component: TheodoiComponent },
-      { path: "nhacmoi", component: NhacmoiComponent },
-      { path: "theloai", component: TheloaiComponent },
-      { path: "top100", component: Top100Component },
-      { path: "mv", component: MvComponent },
     ]
   },
 
