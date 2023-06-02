@@ -204,11 +204,95 @@ svg {
 
 
 
-//responsive for tablet
+//responsive for tabletttttttttttttttttttt
+
+@media (max-width: 980px) {
+
+    .hideon_mobile {
+        display: none;
+    }
+
+    audio {
+        background-color: #2C064A;
+        width: 300px;
+        margin-top: 13px;
+        border: none;
+    }
+
+    //hidden lyric
+    .ca {
+        position: absolute;
+        bottom: -520%;
+        width: 100%;
+        transform: translateY(70%);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .detail {
+        width: 100%;
+        height: 750px;
+        background-color:
+            #41284D;
+    }
+
+    .anhnen {
+        padding-top: 47%;
+    }
+
+    .lyric {
+
+        margin-top: 25%;
+        margin-left: 15%;
+    }
+
+    .lyric p {
+        font-weight: 600;
+        font-size: 20px;
+
+    }
+
+}
 
 @media (max-width: 768px) {
     .hideon_mobile {
         display: none;
+    }
+
+    audio {
+        background-color: #2C064A;
+        width: 280px;
+        margin-top: 13px;
+        border: none;
+    }
+
+    .ca {
+        position: absolute;
+        bottom: -600%;
+        width: 100%;
+        transform: translateY(70%);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .detail {
+        width: 100%;
+        height: 890px;
+        background-color:
+            #41284D;
+    }
+}
+
+// responsive for mobileeeeee
+@media (max-width: 376px) {
+
+    .hideon_mobile {
+        display: none;
+    }
+
+    audio {
+        background-color: #2C064A;
+        width: 240px;
+        margin-top: 13px;
+        border: none;
     }
 
 }

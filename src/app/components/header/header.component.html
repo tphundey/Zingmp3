@@ -8,9 +8,9 @@
 <header class="header_grid">
 
   <div class="header__with-search">
-    <button class="header__button">
-      <i class="bi bi-arrow-left header__button-icon"></i>
-      <i class="bi bi-arrow-right header__button-icon text_gray"></i>
+    <button  class="header__button ">
+      <i class="bi bi-arrow-left header__button-icon hidenon_mobile"></i>
+      <i class="bi bi-arrow-right header__button-icon text_gray hidenon_mobile"></i>
     </button>
     <div class="header__search">
       <input type="text" placeholder="Nhập tên bài hát, nghệ sĩ hoặc MV..." class="header__search-input" />
@@ -97,9 +97,31 @@
         </div>
       </li>
       <li class="nav-item dropdown border-nav-list header__nav-item hide-on-mobile header__nav-btn1 nav-btn--theme">
-        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i style="color: white" class="bi bi-gear header__nav-icon"></i>
+        <a (click)="toggleDropdown()" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i  style="color: white" class="bi bi-gear header__nav-icon dropbtn"></i>
         </a>
+
+        <div class="dropdown-content" [ngClass]="{'show': isDropdownOpen}" style="left:-110px;top:40px">
+          <li><a class="dropdown-item" href="#">Danh sách chặn</a></li>
+          <li>
+            <a class="dropdown-item" href="#" style="display: flex">Chất Lượng nhạc<i
+                class="bi bi-chevron-right"></i></a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#" style="display: flex">Trình phát nhạc<i
+                class="bi bi-chevron-right"></i></a>
+          </li>
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+          <li><a class="dropdown-item" href="#">Giới thiệu 1</a></li>
+          <li><a class="dropdown-item" href="#">Liên hệ</a></li>
+          <li><a class="dropdown-item" href="#">Góp ý</a></li>
+          <li><a class="dropdown-item" href="#">Quảng cáo</a></li>
+          <li>
+            <a class="dropdown-item" href="#">Thoả thuận sử dụng 1</a>
+          </li>
+        </div>
         <ul class="dropdown-menu" style="background-color: #723bf8">
           <li><a class="dropdown-item" href="#">Danh sách chặn</a></li>
           <li>
