@@ -137,7 +137,6 @@ svg {
 
     to {
         transform: rotate(360deg);
-
     }
 }
 
@@ -206,12 +205,45 @@ svg {
 
 //responsive for tablet
 
-@media (max-width: 768px) {
+@media (max-width: 739px) {
     .hideon_mobile {
         display: none;
     }
-    
-    footer{
+
+    footer {
         margin-bottom: 45px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hideon_mobile {
+        display: none;
+    }
+
+    audio {
+        background-color: #2C064A;
+        width: 290px;
+        margin-top: 13px;
+        border: none;
+    }
+}
+
+//responsive for mobile
+
+@media (max-width: 456px) {
+    .hideon_mobile {
+        display: none;
+    }
+
+    audio {
+        background-color: #2C064A;
+        width: 100px;
+        margin-top: 13px;
+        border: none;
+        float: right;
+    }
+
+    audio::-webkit-media-controls-timeline {
+        display: none;
     }
 }
