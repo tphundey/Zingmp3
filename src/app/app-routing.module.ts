@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BaseLayoutComponent } from './layout/base-layout/base-layout.component';
-import { KhamphaComponent } from './pages/khampha/khampha.component';
-import { ZingchartComponent } from './pages/zingchart/zingchart.component';
-import { HomeComponent } from './pages/home/home.component';
-import { LoginComponent } from './pages/login/login.component';
+import { KhamphaComponent } from './pages/user/khampha/khampha.component';
+import { ZingchartComponent } from './pages/user/zingchart/zingchart.component';
+import { HomeComponent } from './pages/user/home/home.component';
+import { LoginComponent } from './pages/user/login/login.component';
+import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -15,9 +17,16 @@ const routes: Routes = [
       { path: "khampha", component: KhamphaComponent },
       { path: "zingchart", component: ZingchartComponent },
       { path: "login", component: LoginComponent }
-     
+
     ]
   },
+  {
+    path: 'admin', component: AdminLayoutComponent, children: [
+      { path: "", redirectTo: "dashboard", pathMatch: "full" },
+      { path: "dashboard", component: DashboardComponent },
+
+    ]
+  }
 
 ];
 
