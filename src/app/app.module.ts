@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +19,9 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
 import { AdminFooterComponent } from './components/admin/admin-footer/admin-footer.component';
 import { AdminSidebarComponent } from './components/admin/admin-sidebar/admin-sidebar.component';
 import { AdminHeaderComponent } from './components/admin/admin-header/admin-header.component';
+import { AddProductComponent } from './pages/admin/add-product/add-product.component';
+import { EditProductComponent } from './pages/admin/edit-product/edit-product.component';
+
 
 // decorators
 @NgModule({
@@ -34,12 +39,17 @@ import { AdminHeaderComponent } from './components/admin/admin-header/admin-head
     DashboardComponent,
     AdminFooterComponent,
     AdminSidebarComponent,
-    AdminHeaderComponent
+    AdminHeaderComponent,
+    AddProductComponent,
+    EditProductComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SidebarModule
+    SidebarModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
