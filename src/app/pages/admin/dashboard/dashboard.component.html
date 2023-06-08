@@ -1,0 +1,23 @@
+<div class="container">
+  <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name music</th>
+        <th>Image music</th>
+        <th>Audio music</th>
+        <th>Name author</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="products && products.length">
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteProduct(product._id)">Xóa</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
