@@ -7,6 +7,9 @@ import { HomeComponent } from './pages/user/home/home.component';
 import { LoginComponent } from './pages/user/login/login.component';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { AddProductComponent } from './pages/admin/add-product/add-product.component';
+import { EditProductComponent } from './pages/admin/edit-product/edit-product.component';
+
 
 
 const routes: Routes = [
@@ -24,6 +27,8 @@ const routes: Routes = [
     path: 'admin', component: AdminLayoutComponent, children: [
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
       { path: "dashboard", component: DashboardComponent },
+      { path: "add", component: AddProductComponent },
+      { path: ":id/edit", component:EditProductComponent },
 
     ]
   }
