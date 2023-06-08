@@ -1,0 +1,32 @@
+<div class="container">
+    <br>
+    <h3>Thêm sản phẩm</h3>
+    <hr />
+
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label for="productName">Tên sản phẩm</label>
+            <input type="text" class="form-control" id="productName" [(ngModel)]="product.name" name="productName">
+        </div>
+
+        <div class="form-group">
+            <label for="productAudio">Audio</label>
+            <input type="text" class="form-control" id="productAudio" [(ngModel)]="product.audio" name="productAudio">
+        </div>
+
+        <div class="form-group">
+            <label for="productImage">Image</label>
+            <input type="text" class="form-control" id="productImage" [(ngModel)]="product.image" name="productImage">
+        </div>
+
+        <div class="form-group">
+            <label for="productAuthor">Author</label>
+            <input type="text" class="form-control" id="productAuthor" [(ngModel)]="product.author"
+                name="productAuthor">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Thêm</button>
+    </form>
+</div>
