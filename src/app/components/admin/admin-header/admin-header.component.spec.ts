@@ -11,7 +11,7 @@ describe('AdminHeaderComponent', () => {
       declarations: [ AdminHeaderComponent ]
     })
     .compileComponents();
-
+    //
     fixture = TestBed.createComponent(AdminHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
