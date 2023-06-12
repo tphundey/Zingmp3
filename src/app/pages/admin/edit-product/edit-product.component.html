@@ -1,21 +1,25 @@
 <div class="container">
-    <h1>Sửa sản phẩm</h1>
-    <hr />
-  
-    <form (submit)="onHandleSubmit()">
-      <div class="form-group">
-        <label for="productName">Tên sản phẩm</label>
-        <input
-          type="text"
-          class="form-control"
-          id="productName"
-          [(ngModel)]="productName"
-          name="productName"
-          required
-        />
-      </div>
-  
-      <button type="submit" class="btn btn-primary">Sửa</button>
-    </form>
-  </div>
-  
+
+
+
+  <form (submit)="onHandleSubmit()">
+    <div class="form-group">
+      <label for="productName">Name</label>
+      <input type="text" class="form-control" id="productName" [(ngModel)]="productName" name="productName" required />
+
+      <label for="productName">Image </label>
+      <input type="text" class="form-control" id="productImage" [(ngModel)]="productImage" name="productImage"
+        required />
+
+      <label for="productAuthor">Tác giả </label>
+      <input type="text" class="form-control" id="productAuthor" [(ngModel)]="productAuthor" name="productAuthor"
+        required />
+
+      <label for="productAudio">Audio</label>
+      <input type="text" class="form-control" id="productAudio" [(ngModel)]="productAudio" name="productAudio"
+        required />
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Sửa</button>
+  </form>
+</div>

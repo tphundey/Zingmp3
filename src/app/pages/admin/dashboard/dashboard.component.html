@@ -1,21 +1,29 @@
 <div class="container">
   <br>
-  <table class="table table-bordered">
+  <table style="text-align: center;"  class="table table-bordered">
     <thead>
       <tr>
-        <th>#</th>
-        <th>Name music</th>
+        <th>STT</th>
         <th>Image music</th>
-        <th>Audio music</th>
+        <th>Name music</th>
         <th>Name author</th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody *ngIf="products && products.length">
-      <tr *ngFor="let product of products">
-        <td>{{ product.id }}</td>
+      <tr *ngFor="let product of products; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td><img style="width: 60px;border-radius: 100px;" [src]="product.image" alt=""></td>
         <td>{{ product.name }}</td>
+        <td>{{ product.author }}</td>
         <td>
           <button class="btn btn-danger" (click)="deleteProduct(product._id)">Xóa</button>
+        </td>
+        <td>
+          <button class="btn btn-success" [routerLink]="['../', product._id, 'edit']">Sửa</button>
+
+
         </td>
       </tr>
     </tbody>

@@ -8,7 +8,7 @@
 <header class="header_grid header_grid_mobile">
 
   <div class="header__with-search">
-    <button  class="header__button ">
+    <button class="header__button ">
       <!-- <i class="bi bi-arrow-left header__button-icon hidenon_mobile"></i> -->
       <!-- <i class="bi bi-arrow-right header__button-icon text_gray hidenon_mobile"></i>  -->
     </button>
@@ -97,35 +97,19 @@
         </div>
       </li>
       <li class="nav-item dropdown border-nav-list header__nav-item hide-on-mobile header__nav-btn1 nav-btn--theme">
-        <a (click)="toggleDropdown()" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i  class="bi bi-gear header__nav-icon dropbtn"></i>
+        <a (click)="toggleDropdown()" class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <i class="bi bi-gear header__nav-icon dropbtn"></i>
         </a>
 
         <div class="dropdown-content" [ngClass]="{'show': isDropdownOpen}" style="left:-110px;top:50px">
-          <li><a class="dropdown-item" href="#"style="display: flex"><i class="bi bi-shield-lock icon-size"></i>Danh sách chặn</a></li>
-          <li>
-            <a class="dropdown-item" href="#" style="display: flex"><i class="bi bi-badge-hd icon-size"></i>Chất Lượng nhạc<i
-                class="bi bi-chevron-right"></i></a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#" style="display: flex"><i class="bi bi-play-circle icon-size"></i>Trình phát nhạc<i
-                class="bi bi-chevron-right"></i></a>
-          </li>
-          <li>
-            <hr class="dropdown-divider" />
-          </li>
-          <li><a class="dropdown-item" href="#"style="display: flex"><i class="bi bi-exclamation-circle icon-size"></i>Giới thiệu </a></li>
-          <li><a class="dropdown-item" href="#"style="display: flex"><i class="bi bi-flag icon-size"></i>Liên hệ</a></li>
-          <li><a class="dropdown-item" href="#"style="display: flex"><i class="bi bi-telephone icon-size"></i>Góp ý</a></li>
-          <li><a class="dropdown-item" href="#"style="display: flex"><i class="bi bi-badge-ad icon-size"></i>Quảng cáo</a></li>
-          <li>
-            <a class="dropdown-item" href="#"style="display: flex"><i class="bi bi-file-text icon-size"></i>Thoả thuận sử dụng </a>
-          </li>
-        </div>
-      </li> 
-      <li class="header__nav-item">
-        <img src="../../../assets/images/logo.png" alt="" class="header__nav-btn" />
+      <li><a class="dropdown-item" href="#" style="display: flex"><i class="bi bi-shield-lock icon-size"></i>Log out</a>
       </li>
-    </ul>
+  </div>
+  </li>
+  <li class="header__nav-item">
+    <img src="../../../assets/images/logo.png" alt="" class="header__nav-btn" />
+  </li>
+  </ul>
   </div>
 </header>
