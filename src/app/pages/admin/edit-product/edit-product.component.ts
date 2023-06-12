@@ -11,6 +11,9 @@ import { HttpClient } from '@angular/common/http';
 export class EditProductComponent implements OnInit {
   productId: string = '';
   productName: string = '';
+  productImage: string = '';
+  productAuthor: string = '';
+  productAudio: string = '';
   originalProduct: any;
 
   constructor(
@@ -31,6 +34,9 @@ export class EditProductComponent implements OnInit {
       (product: any) => {
         this.originalProduct = product;
         this.productName = product.name;
+        this.productImage = product.image;
+        this.productAuthor = product.author;
+        this.productAudio = product.audio;
       },
       error => {
         console.log(error);
@@ -42,7 +48,10 @@ export class EditProductComponent implements OnInit {
     if (this.productName !== this.originalProduct.name) {
       const updatedProduct = {
         _id: this.productId,
-        name: this.productName
+        name: this.productName,
+        image: this.productImage,
+        author: this.productAuthor,
+        audio: this.productAudio,
       };
 
       const apiUrl = `http://localhost:8080/api/products/${this.productId}`;
