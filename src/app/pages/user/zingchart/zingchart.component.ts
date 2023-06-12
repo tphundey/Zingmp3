@@ -1,4 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Product } from 'src/app/interfaces/Product';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-zingchart',
@@ -6,79 +8,68 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./zingchart.component.scss']
 })
 export class ZingchartComponent {
+
+  products: Product[] = [];
+
+  constructor(private http: HttpClient) {
+    this.getProducts();
+  }
+
+  getProducts() {
+    this.http.get<any>('http://localhost:8080/api/products').subscribe(
+      data => {
+        this.products = data.data;
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
+
   @ViewChild('audioPlayer', { static: true }) audioPlayer!: ElementRef;
 
-  song1Playing: boolean = false;
-  song2Playing: boolean = false;
-  song3Playing: boolean = false;
-  song4Playing: boolean = false;
-  song1Duration: number = 0;
-  song2Duration: number = 0;
-  song3Duration: number = 0;
-  song4Duration: number = 0;
+  songPlaying: number | null = null;
+  songDurations: number[] = [];
 
   ngAfterViewInit() {
     this.audioPlayer.nativeElement.addEventListener('timeupdate', () => {
-      this.updateSongDuration('1');
-      this.updateSongDuration('2');
-      this.updateSongDuration('3');
-      this.updateSongDuration('4');
+      this.updateSongDurations();
     });
   }
 
-  toggleSong(songId: string) {
-    const audioPlayer = document.getElementById(`audioPlayer${songId}`) as HTMLAudioElement;
-    const icon = document.querySelector(`i[data-song="${songId}"]`) as HTMLElement;
+  toggleSong(index: number) {
+    const audioPlayer = document.getElementById(`audioPlayer${index}`) as HTMLAudioElement;
 
     if (audioPlayer.paused) {
+      this.pauseAllSongs(); // Dừng tất cả các bài hát đang chạy trước khi chạy bài hát mới
       audioPlayer.play();
-      this.setSongPlaying(songId, true);
+      this.songPlaying = index;
     } else {
       audioPlayer.pause();
-      this.setSongPlaying(songId, false);
+      this.songPlaying = -1; // Gán giá trị -1 để không có bài hát nào đang chạy
     }
   }
 
-  setSongPlaying(songId: string, playing: boolean) {
-    switch (songId) {
-      case '1':
-        this.song1Playing = playing;
-        break;
-      case '2':
-        this.song2Playing = playing;
-        break;
-      case '3':
-        this.song3Playing = playing;
-        break;
-      case '4':
-        this.song4Playing = playing;
-        break;
-      default:
-        break;
+  pauseAllSongs() {
+    const audioPlayers = document.getElementsByTagName('audio');
+    for (let i = 0; i < audioPlayers.length; i++) {
+      const audioPlayer = audioPlayers[i] as HTMLAudioElement;
+      audioPlayer.pause();
     }
   }
 
-  updateSongDuration(songId: string) {
-    const audioPlayer = document.getElementById(`audioPlayer${songId}`) as HTMLAudioElement;
+
+  setSongPlaying(index: number | null) {
+    this.songPlaying = index;
+  }
+
+  updateSongDurations() {
+    const audioPlayer = this.audioPlayer.nativeElement as HTMLAudioElement;
     const currentTime = Math.floor(audioPlayer.currentTime);
-  
-    if (currentTime && currentTime !== Infinity) {
-      switch (songId) {
-        case '1':
-          this.song1Duration = currentTime;
-          break;
-        case '2':
-          this.song2Duration = currentTime;
-          break;
-        case '3':
-          this.song3Duration = currentTime;
-          break;
-        case '4':
-          this.song4Duration = currentTime;
-          break;
-        default:
-          break;
-      }
+
+    if (currentTime && currentTime !== Infinity && this.songPlaying !== null) {
+      this.songDurations[this.songPlaying] = currentTime;
     }
   }
+
 }
