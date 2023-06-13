@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent {
+  // fix add
   product: any = {
     name: '',
     audio: '',
@@ -15,7 +16,6 @@ export class AddProductComponent {
   };
 
   constructor(private http: HttpClient) { }
-
   onSubmit() {
     const apiUrl = 'http://localhost:8080/api/products';
     this.http.post(apiUrl, this.product).subscribe(
