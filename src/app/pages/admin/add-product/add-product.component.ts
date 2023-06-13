@@ -7,7 +7,6 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent {
-  // fix add 
   product: any = {
     name: '',
     audio: '',
