@@ -1,5 +1,7 @@
 <div class="container">
-  <br>
+  <br><br>
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Tìm kiếm theo tên">
+  <br><br>
   <table style="text-align: center;"  class="table table-bordered">
     <thead>
       <tr>
@@ -13,18 +15,19 @@
     </thead>
     <tbody *ngIf="products && products.length">
       <tr *ngFor="let product of products; let i = index">
-        <td>{{ i + 1 }}</td>
-        <td><img style="width: 60px;border-radius: 100px;" [src]="product.image" alt=""></td>
-        <td>{{ product.name }}</td>
-        <td>{{ product.author }}</td>
-        <td>
-          <button class="btn btn-danger" (click)="deleteProduct(product._id)">Xóa</button>
-        </td>
-        <td>
-          <button class="btn btn-success" [routerLink]="['../', product._id, 'edit']">Sửa</button>
-
-
-        </td>
+        <!-- Kiểm tra nếu tên sản phẩm chứa searchTerm -->
+        <ng-container *ngIf="product.name.toLowerCase().includes(searchTerm.toLowerCase())">
+          <td>{{ i + 1 }}</td>
+          <td><img style="width: 60px; border-radius: 100px;" [src]="product.image" alt=""></td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.author }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteProduct(product._id)">Xóa</button>
+          </td>
+          <td>
+            <button class="btn btn-success" [routerLink]="['../', product._id, 'edit']">Sửa</button>
+          </td>
+        </ng-container>
       </tr>
     </tbody>
   </table>

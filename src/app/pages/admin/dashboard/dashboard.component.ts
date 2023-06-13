@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DashboardComponent {
   products: Product[] = [];
-
+  searchTerm: string = '';
   constructor(private http: HttpClient) {
     this.getProducts();
   }
