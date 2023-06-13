@@ -1,5 +1,4 @@
-import { Component , OnInit} from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -7,8 +6,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './add-product.component.html',
   styleUrls: ['./add-product.component.scss']
 })
-export class AddProductComponent implements OnInit {
-  // productForm: FormGroup;
+export class AddProductComponent {
   product: any = {
     name: '',
     audio: '',
@@ -16,20 +14,9 @@ export class AddProductComponent implements OnInit {
     author: ''
   };
 
-  constructor(private http: HttpClient , private formBuilder: FormBuilder) { }
+  constructor(private http: HttpClient) { }
 
-  ngOnInit() {
-    this.product = this.formBuilder.group({
-      productName: ['', Validators.required],
-      productAudio: [''],
-      productImage: [''],
-      productAuthor: ['']
-    });
-  }
   onSubmit() {
-    if (this.product.invalid) {
-      return;
-    }
     const apiUrl = 'http://localhost:8080/api/products';
     this.http.post(apiUrl, this.product).subscribe(
       response => {
